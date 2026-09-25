@@ -13,10 +13,12 @@ const data =fs.readFileSync("notes.txt","utf8")
 console.log("Data:",data)
 // output- Data: <Buffer 48 65 6c 6c 6f 20 57 6f 72 6c 64>
 // ab hum encoding method ka use krege or isse kya higa ki ye buffer data ko human readable data me convert kr dega 
-// utf 8 hai encoder 
+// utf 8 hai encoder or vo add kr dege buffer se bachne ke liye
 
 //update the file 
 fs.appendFileSync("notes.txt","hello World")
 
 //delete the file
 fs.rmSync("notes.txt")
+
+// agar yha sync hata dege to ye unsynchronour ban jayega or iske bhi 2 tarike hai 
